@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="199dp"
+        app:srcCompat="@drawable/download"/>
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:text="Covid-19 memakan korbannya nyawa sebanyak 2000 jiwa"
+        android:textStyle="bold"
+        android:textSize="20dp">
+    </TextView>
+    <EditText
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt1"
+        android:text="Tanggapan"></EditText>
+    <Button
+        android:id="@+id/btn_tanggapan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:text="Kirim">
+    </Button>
+
+</RelativeLayout>
