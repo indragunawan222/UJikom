@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "354782562990",
+    "firebase_url": "https://pengaduan-masyarakat-441b9.firebaseio.com",
+    "project_id": "pengaduan-masyarakat-441b9",
+    "storage_bucket": "pengaduan-masyarakat-441b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354782562990:android:4bc43f88d872147bfabb3f",
+        "android_client_info": {
+          "package_name": "com.example.danianwar.pengaduanmasyarakat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354782562990-3ftbii4folimoca2v2nkbqrlrt7ae1co.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danianwar.pengaduanmasyarakat",
+            "certificate_hash": "0ae912e59616bc8dbd868ebd751b171688bc284d"
+          }
+        },
+        {
+          "client_id": "354782562990-m38k9nc3h5o4sb6a125ma9jgjpat86d4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrQd36dsBVbYYyiuaBL--LRnlg2y2hcE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354782562990-m38k9nc3h5o4sb6a125ma9jgjpat86d4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

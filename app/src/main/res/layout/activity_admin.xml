@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="logot">
+    </Button>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnAdminAdmin"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="ADMIN"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="35sp"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/btnPetugasAdmin"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Petugas"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="40sp"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:id="@+id/btnMasyarakatAdmin"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Masyarakat"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="40sp"
+                android:layout_margin="20dp"/>
+
+
+            <Button
+                android:id="@+id/btnTanggapanAdmin"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Tanggapan"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="40sp"
+                android:layout_margin="20dp"/>
+
+
+            <Button
+                android:id="@+id/btnPengaduanAdmin"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Pengaduan"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="40sp"
+                android:layout_margin="20dp"/>
+
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

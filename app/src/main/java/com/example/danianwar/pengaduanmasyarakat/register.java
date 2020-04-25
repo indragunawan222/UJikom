@@ -1,14 +1,14 @@
 package com.example.danianwar.pengaduanmasyarakat;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,17 +17,14 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Activity_Register extends AppCompatActivity {
-
+public class register extends AppCompatActivity {
     DatabaseReference databaseReference;
 
     private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.form_register);
-
+        setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference("User").child("Masyarakat");
 
@@ -40,7 +37,6 @@ public class Activity_Register extends AppCompatActivity {
             }
         });
     }
-
     private void CallEventRegister(){
         final EditText etNama = (EditText)findViewById(R.id.txt_nama);
         final EditText etUsername = (EditText)findViewById(R.id.txt_username);
@@ -60,29 +56,29 @@ public class Activity_Register extends AppCompatActivity {
                 //validasi email dan password
                 // jika email kosong
                 if (username.isEmpty()){
-                    Toast.makeText(Activity_Register.this, "username tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this,"username tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }
                 //jika password kurang dari 6 karakter
                 else if (username.length() == 16){
-                    Toast.makeText(Activity_Register.this, "nik tidak 16 digit", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this, "nik tidak 16 digit", Toast.LENGTH_SHORT).show();
                 }
                 // jika password kosong
                 else if (pass.isEmpty()){
-                    Toast.makeText(Activity_Register.this, "password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this, "password tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }
                 //jika password kurang dari 6 karakter
                 else if (pass.length() < 6){
-                    Toast.makeText(Activity_Register.this, "password kurang dari 8", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this, "password kurang dari 8", Toast.LENGTH_SHORT).show();
                 }
                 else {
 
                     mAuth.createUserWithEmailAndPassword(username, pass)
-                            .addOnCompleteListener(Activity_Register.this, new OnCompleteListener<AuthResult>() {
+                            .addOnCompleteListener(register.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     //jika gagal register do something
                                     if (!task.isSuccessful()) {
-                                        Toast.makeText(Activity_Register.this,
+                                        Toast.makeText(register.this,
                                                 "Register gagal karena " + task.getException().getMessage(),
                                                 Toast.LENGTH_LONG).show();
                                     } else {
@@ -90,11 +86,11 @@ public class Activity_Register extends AppCompatActivity {
                                         String id = mAuth.getCurrentUser().getUid();
                                         Entity_Masyarakat masyarakat = new Entity_Masyarakat(id,nik, nams, username, pass, telp);
                                         databaseReference.child(id).setValue(masyarakat);
-                                        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
-                                        startActivity(intent);
-                                        Toast.makeText(Activity_Register.this,
+                                        Toast.makeText(register.this,
                                                 "Register berhasil ",
                                                 Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
+                                        startActivity(intent);
                                     }
                                 }
                             });
@@ -104,5 +100,4 @@ public class Activity_Register extends AppCompatActivity {
             }
         });
     }
-
 }

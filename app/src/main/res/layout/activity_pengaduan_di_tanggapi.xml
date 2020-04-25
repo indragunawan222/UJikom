@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".PengaduanDiTanggapi">
 
 
     <ScrollView
@@ -61,40 +61,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Tanggapan"
-                    android:text="isi Tanggapan"/>
+                    android:text="isi Tanggapan"
+                    android:enabled="false"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
-
-            <Button
-                android:id="@+id/btn_tanggapan_tambah"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ti2"
-                android:text="Kirim"
-                android:visibility="visible"
-                android:enabled="true"/>
-
-            <Button
-                android:id="@+id/btn_tanggapan_edit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_tanggapan_tambah"
-                android:text="edit"
-                android:visibility="visible"
-                android:enabled="true">
-            </Button>
-
-            <Button
-                android:id="@+id/btn_tanggapan_hapus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_tanggapan_edit"
-                android:text="hapus"
-                android:visibility="visible"
-                android:enabled="true">
-            </Button>
 
         </RelativeLayout>
 

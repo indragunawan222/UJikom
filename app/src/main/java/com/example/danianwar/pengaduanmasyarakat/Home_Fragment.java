@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.danianwar.pengaduanmasyarakat.R;
+
 public class Home_Fragment extends Fragment {
     @Nullable
     @Override
